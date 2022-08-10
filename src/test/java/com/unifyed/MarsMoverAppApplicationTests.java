@@ -1,5 +1,6 @@
 package com.unifyed;
 
+import com.unifyed.config.MarsMoverController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,6 +15,9 @@ class MarsMoverAppApplicationTests {
 	@Autowired
 	MarsMoverAppApplication marsMoverAppApplication;
 
+	@Autowired
+	MarsMoverController marsMoverController;
+
 	@Test
 	public void contextLoads() {
 		Assertions.assertTrue(marsMoverAppApplication!=null);
@@ -21,7 +25,7 @@ class MarsMoverAppApplicationTests {
 
 	@Test
 	public void testRoverCommandsSample() {
-		marsMoverAppApplication.processInputFile("src/test/resources/RoverCommandsSample.txt");
+		marsMoverController.processInput("src/test/resources/RoverCommandsSample.txt");
 //		Assertions.assertNotNull(theatres.get(0).getTheater_id());
 //		Assertions.assertNotNull(theatres.get(0).getTheater_name());
 //		Assertions.assertNotNull(theatres.get(0).getTheater_name().equals("Finox mall"));
