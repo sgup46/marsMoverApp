@@ -18,7 +18,7 @@ public class MarsMoverPlateuInputService implements InputService<List<String>, P
             String input[] = inputs.get(0).split(" ");
             return new Plataeu(Integer.parseInt(input[0]), Integer.parseInt(input[1]));
         } catch (Exception e) {
-            throw new MarsRoverException("invalid input for Plateu");
+            throw new MarsRoverException("invalid input for Plateu:" + inputs);
         }
     }
 }

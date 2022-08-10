@@ -41,7 +41,7 @@ public class MarsMoverRoverInputService implements InputService<List<String>, Ro
             });
             return new RoverCommands(rover, roverCommands);
         } catch (Exception e) {
-            throw new MarsRoverException("invalid input for Rovers");
+            throw new MarsRoverException("invalid input for Rovers:"+ inputs);
         }
     }
 }
