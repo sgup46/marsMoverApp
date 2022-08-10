@@ -1,4 +1,8 @@
 package com.unifyed.model;
+
+import lombok.Data;
+import lombok.ToString;
+
 /**
  * 
  * This class defines X&Y Coordinates. This class is used to store X&Y coordinates of the Robot. 
@@ -14,32 +18,17 @@ package com.unifyed.model;
  * @author Sushant Gupta
  * 
  */
+@Data
+@ToString(callSuper=true, includeFieldNames=true)
 public class Coordinates {
 	private int xCoordinate, yCoordinate;
 		
-	public Coordinates(int x, int y)
+	public Coordinates(final int x, final int y)
 	{
 		xCoordinate = x;
 		yCoordinate = y;
 	}
-	
-	//Defining a copy constructor
-	public Coordinates(Coordinates xy){
-		this.xCoordinate = xy.getX();
-		this.yCoordinate = xy.getY();
-	}
-	
-	public void setXY(int x,int y)
-	{
-		xCoordinate = x;
-		yCoordinate = y;
-	}
-	public int getX(){
-		return xCoordinate;
-	}
-	public int getY(){
-		return yCoordinate;
-	}
+
 	public void incrementX(){
 		xCoordinate++;
 	}
@@ -52,7 +41,8 @@ public class Coordinates {
 	public void decrementY(){
 		yCoordinate--;
 	}
-	public boolean isCoordinatesSet(){
-		return ((xCoordinate >= 0) && (yCoordinate >=0))? true : false; 
-	}
+
+//	public boolean isCoordinatesSet(){
+//		return ((xCoordinate >= 0) && (yCoordinate >=0))? true : false;
+//	}
 }

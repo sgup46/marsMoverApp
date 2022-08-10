@@ -1,10 +1,6 @@
 package com.unifyed.service.commands;
 
-import com.unifyed.model.Coordinates;
-import com.unifyed.model.DIRECTIONS;
-import com.unifyed.model.Plataeu;
-import com.unifyed.model.Rover;
-import com.unifyed.service.commands.Command.RoverCommand;
+import com.unifyed.service.commands.Command.Command;
 
 /**
  * MoveCommand implements the RoboCommands interface. It takes care of calling the move function of the
@@ -17,7 +13,7 @@ import com.unifyed.service.commands.Command.RoverCommand;
  * @author Sushant Gupta
  *
  */
-public class MoveCommand implements RoverCommand {
+public class MoveCommand implements Command {
 //	private Rover rover;
 //	private String command;
 //	private Coordinates newXYCoordinates;

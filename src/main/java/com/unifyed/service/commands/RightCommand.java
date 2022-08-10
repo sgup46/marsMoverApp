@@ -1,7 +1,6 @@
 package com.unifyed.service.commands;
 
-import com.unifyed.model.Rover;
-import com.unifyed.service.commands.Command.RoverCommand;
+import com.unifyed.service.commands.Command.Command;
 
 /**
  * The RightCommand is an implementation of commandInterface, RoboCommands. This class takes care of 
@@ -11,7 +10,7 @@ import com.unifyed.service.commands.Command.RoverCommand;
  * @author Sharvari Nagesh
  * 
  */
-public class RightCommand implements RoverCommand {
+public class RightCommand implements Command {
 //private Rover rover;
 //
 //static

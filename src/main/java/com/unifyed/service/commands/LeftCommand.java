@@ -1,7 +1,6 @@
 package com.unifyed.service.commands;
 
-import com.unifyed.model.Rover;
-import com.unifyed.service.commands.Command.RoverCommand;
+import com.unifyed.service.commands.Command.Command;
 
 /**
  * The LeftCommand is an implementation of commandInterface, RoboCommands. This class takes care of 
@@ -11,7 +10,7 @@ import com.unifyed.service.commands.Command.RoverCommand;
  * @author Sharvari Nagesh
  * 
  */
-public class LeftCommand implements RoverCommand {
+public class LeftCommand implements Command {
 //private Rover rover;
 //
 //static

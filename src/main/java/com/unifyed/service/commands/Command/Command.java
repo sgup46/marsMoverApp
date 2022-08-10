@@ -1,4 +1,4 @@
 package com.unifyed.service.commands.Command;
 
-public interface RoverCommand {
+public interface Command {
 }

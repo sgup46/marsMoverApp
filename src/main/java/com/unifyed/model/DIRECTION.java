@@ -9,11 +9,11 @@ package com.unifyed.model;
  * 
  * ENUMs were introduced from Java 1.5. So this program is not compatible with java older than version 1.5
  * 
- * @author Sharvari Nagesh
+ * @author Sushant Gupta
  *
  */
-public enum DIRECTIONS{
-	NORTH
+public enum DIRECTION {
+	N
 	{
 		public Coordinates moveInDirection(Coordinates xy){
 			xy.incrementY();
@@ -21,14 +21,14 @@ public enum DIRECTIONS{
 		}
 			
 	},
-	EAST
+	E
 	{
 		public Coordinates moveInDirection(Coordinates xy){
 			xy.incrementX();
 			return xy;
 		}
 	},
-	SOUTH
+	S
 	{
 		public Coordinates moveInDirection(Coordinates xy){
 			xy.decrementY();
@@ -36,7 +36,7 @@ public enum DIRECTIONS{
 		}
 	},
 	
-	WEST
+	W
 	{
 		public Coordinates moveInDirection(Coordinates xy){
 			xy.decrementX();
