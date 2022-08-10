@@ -8,6 +8,7 @@ import com.unifyed.model.Rover;
 import com.unifyed.model.RoverCommands;
 import com.unifyed.service.commands.Command.Command;
 import com.unifyed.service.commands.Command.CommandFactory;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ import java.util.List;
  *  * Class responsible for processing input for rovers
  */
 @Service
+@Data
 public class MarsMoverRoverInputService implements InputService<List<String>, RoverCommands> {
     @Autowired
     private CommandFactory commandFactory;
