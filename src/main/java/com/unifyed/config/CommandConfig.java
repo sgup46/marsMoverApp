@@ -9,7 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class CommandConfig {
 
-
+    /**
+     * Bean will act as Service Factory to get the commands
+     * @return
+     */
     @Bean("commandFactory")
     public FactoryBean serviceLocatorFactoryBean() {
         ServiceLocatorFactoryBean factoryBean = new ServiceLocatorFactoryBean();

@@ -1459,3 +1459,916 @@ Caused by: com.unifyed.exception.MarsRoverException: -1
 2022-08-10 19:12:40,841 INFO com.unifyed.service.MarsMoverOutputService [main] 1 3 N
 5 1 E
 2022-08-10 19:12:40,870 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:19:30,379 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 22740 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:19:30,379 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:19:30,379 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:19:31,763 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverPlateuInputService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+2022-08-10 19:19:31,779 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:19:32,012 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverPlateuInputService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.InputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.InputService' in your configuration.
+
+2022-08-10 19:19:32,013 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@56cdfb3b] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@4016ccc1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverPlateuInputService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverPlateuInputService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2022-08-10 19:19:32,064 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 22740 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:19:32,064 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:19:32,064 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:19:32,362 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverPlateuInputService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+2022-08-10 19:19:32,362 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:19:32,495 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverPlateuInputService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.InputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.InputService' in your configuration.
+
+2022-08-10 19:19:32,495 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@56cdfb3b] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@2cc75074]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverPlateuInputService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverPlateuInputService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.InputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=MarsMoverPlateuInputService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2022-08-10 19:20:05,893 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 19176 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:20:05,893 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:20:05,893 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:20:07,244 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+2022-08-10 19:20:07,260 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:20:07,477 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverProcessService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.OutputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.OutputService' in your configuration.
+
+2022-08-10 19:20:07,477 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1e8ce150] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@481558ce]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2022-08-10 19:20:07,544 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 19176 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:20:07,544 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:20:07,544 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:20:07,877 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+2022-08-10 19:20:07,894 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:20:08,043 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverProcessService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.OutputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.OutputService' in your configuration.
+
+2022-08-10 19:20:08,043 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1e8ce150] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@4b87760e]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2022-08-10 19:21:19,040 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 12200 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:21:19,040 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:21:19,040 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:21:20,856 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+2022-08-10 19:21:20,872 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:21:21,090 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverProcessService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.OutputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.OutputService' in your configuration.
+
+2022-08-10 19:21:21,090 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@56cdfb3b] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@3659d7b1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2022-08-10 19:21:21,157 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 12200 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:21:21,157 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:21:21,162 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:21:21,506 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+2022-08-10 19:21:21,506 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:21:21,639 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverProcessService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.OutputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.OutputService' in your configuration.
+
+2022-08-10 19:21:21,640 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@56cdfb3b] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@3c74aa0d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:98)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$5(ClassBasedTestDescriptor.java:337)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:342)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:337)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175)
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1382)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:743)
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:742)
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:580)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:336)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:259)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:252)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:251)
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:29)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:107)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:75)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:895)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:124)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	... 65 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 83 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 96 common frames omitted
+2022-08-10 19:22:29,719 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 25320 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:22:29,719 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:22:29,730 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:22:29,802 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:22:29,802 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:22:31,785 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:22:31,801 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:22:31,801 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:22:31,818 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:22:31,935 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:22:31,935 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2133 ms
+2022-08-10 19:22:32,318 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'marsMoverProcessService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.Iservice.OutputService<?, ?>' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=marsMoverProcessService)}
+2022-08-10 19:22:32,322 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2022-08-10 19:22:32,335 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 19:22:32,522 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field marsMoverProcessService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.Iservice.OutputService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+The following candidates were found but could not be injected:
+	- User-defined bean
+
+
+Action:
+
+Consider revisiting the entries above or defining a bean of type 'com.unifyed.service.Iservice.OutputService' in your configuration.
+
+2022-08-10 19:23:10,066 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 27352 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:23:10,066 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:23:10,066 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:23:10,115 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:23:10,115 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:23:11,932 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:23:11,950 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:23:11,950 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:23:11,950 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:23:12,084 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:23:12,084 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1969 ms
+2022-08-10 19:23:12,733 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:23:13,058 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:23:13,068 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:23:13,132 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:23:13,183 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:23:13,188 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.73 seconds (JVM running for 4.425)
+2022-08-10 19:23:13,256 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:23:13,257 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:23:13,271 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:23:13,280 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@c24a87ec, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@683900a3, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.LeftCommand@683900a3, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.LeftCommand@683900a3, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.LeftCommand@683900a3, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.MoveCommand@5cbe4126])
+2022-08-10 19:23:13,282 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@310de1d, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.RightCommand@160cbc9f, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.RightCommand@160cbc9f, com.unifyed.service.commands.MoveCommand@5cbe4126, com.unifyed.service.commands.RightCommand@160cbc9f, com.unifyed.service.commands.RightCommand@160cbc9f, com.unifyed.service.commands.MoveCommand@5cbe4126])
+2022-08-10 19:23:13,284 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N
+5 1 E
+2022-08-10 19:23:16,749 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:23:23,953 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 5444 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:23:23,953 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:23:23,953 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:23:25,732 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:23:26,549 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:23:26,632 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 3.194 seconds (JVM running for 4.613)
+2022-08-10 19:23:26,681 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:23:26,681 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:23:26,962 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:23:26,965 INFO com.unifyed.controller.MarsMoverController [main] 5 5
+2022-08-10 19:23:26,965 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@a847b354, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.MoveCommand@7da39774])
+2022-08-10 19:23:26,965 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@ae846eb2, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.MoveCommand@7da39774])
+2022-08-10 19:23:26,965 INFO com.unifyed.service.MarsMoverOutputService [main] 1 3 N
+5 1 E
+2022-08-10 19:23:26,998 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
