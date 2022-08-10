@@ -258,3 +258,114 @@ Caused by: java.lang.ClassNotFoundException: org.springframework.dao.DataAccessE
 2022-08-10 14:28:07,427 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.0 seconds (JVM running for 3.543)
 2022-08-10 14:28:07,444 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
 2022-08-10 14:28:09,862 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:37:11,383 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 19208 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 14:37:11,387 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 14:37:11,388 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 14:37:11,446 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 14:37:11,446 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 14:37:13,346 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 14:37:13,372 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 14:37:13,372 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 14:37:13,372 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 14:37:13,488 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 14:37:13,488 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2042 ms
+2022-08-10 14:37:13,746 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'commandLineRunnerBean' defined in com.unifyed.MarsMoverAppApplication: Unsatisfied dependency expressed through method 'commandLineRunnerBean' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-08-10 14:37:13,828 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2022-08-10 14:37:13,845 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 14:37:14,030 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method commandLineRunnerBean in com.unifyed.MarsMoverAppApplication required a bean of type 'java.lang.String' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'java.lang.String' in your configuration.
+
+2022-08-10 14:38:51,673 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 6844 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 14:38:51,673 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 14:38:51,673 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 14:38:51,743 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 14:38:51,744 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 14:38:53,239 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 14:38:53,256 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 14:38:53,256 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 14:38:53,256 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 14:38:53,356 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 14:38:53,356 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1612 ms
+2022-08-10 14:38:53,806 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:38:54,094 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 14:38:54,106 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 14:38:54,156 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 14:38:54,189 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 14:38:54,189 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.022 seconds (JVM running for 3.581)
+2022-08-10 14:38:54,206 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 14:38:54,206 ERROR com.unifyed.MarsMoverAppApplication [restartedMain] Invalid input to process
+2022-08-10 14:38:58,556 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:39:08,839 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 10008 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 14:39:08,839 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 14:39:08,839 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 14:39:10,422 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:39:11,055 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 14:39:11,129 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 2.694 seconds (JVM running for 3.812)
+2022-08-10 14:39:11,170 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 14:39:11,171 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 14:39:11,421 ERROR com.unifyed.MarsMoverAppApplication [main] Going to process file :RoverCommandsSample.txt
+2022-08-10 14:39:11,438 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:46:16,830 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 23396 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 14:46:16,830 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 14:46:16,830 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 14:46:18,446 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:46:19,179 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 14:46:19,245 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 2.825 seconds (JVM running for 3.955)
+2022-08-10 14:46:19,262 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 14:46:19,262 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 14:46:19,529 ERROR com.unifyed.MarsMoverAppApplication [main] Going to process file :RoverCommandsSample.txt
+2022-08-10 14:46:19,563 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:51:11,412 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 12728 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 14:51:11,430 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 14:51:11,430 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 14:51:11,496 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 14:51:11,496 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 14:51:13,528 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 14:51:13,545 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 14:51:13,545 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 14:51:13,545 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 14:51:13,662 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 14:51:13,662 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2166 ms
+2022-08-10 14:51:14,266 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:51:14,599 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 14:51:14,607 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 14:51:14,670 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 14:51:14,714 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 14:51:14,725 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.882 seconds (JVM running for 5.352)
+2022-08-10 14:51:14,776 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 14:51:14,776 ERROR com.unifyed.MarsMoverAppApplication [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 14:51:14,783 INFO com.unifyed.MarsMoverAppApplication [restartedMain] 5 5
+2022-08-10 14:51:14,783 INFO com.unifyed.MarsMoverAppApplication [restartedMain] 1 2 N
+2022-08-10 14:51:14,783 INFO com.unifyed.MarsMoverAppApplication [restartedMain] LMLMLMLMM
+2022-08-10 14:51:14,783 INFO com.unifyed.MarsMoverAppApplication [restartedMain] 3 3 E
+2022-08-10 14:51:14,783 INFO com.unifyed.MarsMoverAppApplication [restartedMain] MMRMMRMRRM
+2022-08-10 14:51:38,582 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:51:49,660 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 11368 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 14:51:49,660 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 14:51:49,677 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 14:51:51,293 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 14:51:51,896 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 14:51:51,974 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 2.814 seconds (JVM running for 4.027)
+2022-08-10 14:51:51,993 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 14:51:51,993 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 14:51:52,243 ERROR com.unifyed.MarsMoverAppApplication [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 14:51:52,243 INFO com.unifyed.MarsMoverAppApplication [main] 5 5
+2022-08-10 14:51:52,243 INFO com.unifyed.MarsMoverAppApplication [main] 1 2 N
+2022-08-10 14:51:52,243 INFO com.unifyed.MarsMoverAppApplication [main] LMLMLMLMM
+2022-08-10 14:51:52,243 INFO com.unifyed.MarsMoverAppApplication [main] 3 3 E
+2022-08-10 14:51:52,243 INFO com.unifyed.MarsMoverAppApplication [main] MMRMMRMRRM
+2022-08-10 14:51:52,276 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

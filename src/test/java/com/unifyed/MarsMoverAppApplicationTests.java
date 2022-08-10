@@ -21,7 +21,7 @@ class MarsMoverAppApplicationTests {
 
 	@Test
 	public void testRoverCommandsSample() {
-		marsMoverAppApplication.commandLineRunnerBean();
+		marsMoverAppApplication.processInputFile("src/test/resources/RoverCommandsSample.txt");
 //		Assertions.assertNotNull(theatres.get(0).getTheater_id());
 //		Assertions.assertNotNull(theatres.get(0).getTheater_name());
 //		Assertions.assertNotNull(theatres.get(0).getTheater_name().equals("Finox mall"));
