@@ -29,32 +29,17 @@ class MarsMoverAppApplicationTests {
 		Assertions.assertEquals(output, "1 3 N\n" +
 				                               "5 1 E");
 	}
-//
-//	@Test
-//	public void testB2BContollerCreateShow() {
-//		HashMap request = new HashMap();
-//		request.put("show_time", "\"3:30 PM\"");
-//		Show show =  b2BContoller.addShowToTheaterForMovie(6L,
-//				10L, request);
-//		Assertions.assertNotNull(show);
-//		Assertions.assertNotNull(show.getShow_Id());
-//		Assertions.assertEquals(show.getShow_Id(), 1);
-//	}
-//
-//	@Test
-//	public void testB2BContollerUpdateShow() {
-//		HashMap request = new HashMap();
-//		request.put("show_time", "\"6:30 PM\"");
-//		Show show =  b2BContoller.addShowToTheaterForMovie(6L,
-//				10L, request);
-//		Assertions.assertNotNull(show);
-//		Assertions.assertNotNull(show.getShow_Id());
-//	}
-//
-//	@Test
-//	public void testB2BContolleDeleteShow() {
-//		HashMap request = new HashMap();
-//		b2BContoller.deleteShowToTheaterForMovie(6L,
-//				10L);
-//	}
+
+	@Test
+	public void testRoverCommandsInvalidSample() {
+		String output = null;
+		try {
+			output = marsMoverController.processInput("src/test/resources/RoverCommandsInvalidSample.txt");
+		} catch (Exception e) {
+			Assertions.assertEquals(e.getMessage(), "Unable to place rover:5 1 E on new coordinates: " +
+					"Coordinates(super=com.unifyed.model.Coordinates@efc, xCoordinate=6, yCoordinate=1) having plateu: 5 5");
+		}
+
+	}
+
 }

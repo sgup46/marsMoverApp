@@ -20,7 +20,7 @@ public class MarsMoverPlateuInputServiceTest {
 
     @Test
     public void testProcessInput() {
-        Plataeu plataeu = marsMoverPlateuInputService.processInput(Arrays.asList("4", "4"));
+        Plataeu plataeu = marsMoverPlateuInputService.processInput(Arrays.asList("4 4"));
         Assertions.assertEquals(plataeu.getXAxisValue(), 4);
         Assertions.assertEquals(plataeu.getYAxisValue(), 4);
     }
