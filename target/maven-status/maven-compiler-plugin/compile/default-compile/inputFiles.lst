@@ -1,3 +1,12 @@
 C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\exception\ExceptionController.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\model\Coordinates.java
 C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\exception\MarsRoverException.java
-C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\MarsMoverAppApplication.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\model\Plataeu.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\service\RoverCommandService.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\model\Rover.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\service\commands\MoveCommand.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\service\commands\RightCommand.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\service\commands\LeftCommand.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\service\commands\Command\RoverCommand.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\model\DIRECTIONS.java
+C:\Users\susha\IdeaProjects\marsMoverApp\src\main\java\com\unifyed\MarsMoverAppApplication.java
