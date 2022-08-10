@@ -1,6 +1,6 @@
 package com.unifyed;
 
-import com.unifyed.config.MarsMoverController;
+import com.unifyed.controller.MarsMoverController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

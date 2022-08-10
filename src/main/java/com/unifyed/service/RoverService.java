@@ -6,13 +6,20 @@ import com.unifyed.model.DIRECTION;
 import com.unifyed.model.Rover;
 import com.unifyed.model.RoverCommands;
 import com.unifyed.service.commands.Command.Command;
+import com.unifyed.service.commands.Command.CommandFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
 @Service
 public class RoverService  implements MarsMoverService<List<String>, RoverCommands>{
+    @Autowired
+    private CommandFactory commandFactory;
+
     @Override
     public RoverCommands process(List<String> inputs) {
 
@@ -22,8 +29,11 @@ public class RoverService  implements MarsMoverService<List<String>, RoverComman
             Coordinates coordinates = new Coordinates(Integer.parseInt(roverinput[0]), Integer.parseInt(roverinput[1]));
             Rover rover = new Rover(direction, coordinates);
 
-            LinkedHashSet<Command> roverCommands = new LinkedHashSet<>();
-            String commandinput[] = inputs.get(1).split(" ");
+            List<Command> roverCommands = new ArrayList<>();
+            String commandinput[] = inputs.get(1).split("");
+            Arrays.stream(commandinput).forEach(commandToProcess -> {
+                roverCommands.add(commandFactory.getCommand(commandToProcess));
+            });
             return new RoverCommands(rover, roverCommands);
         } catch (Exception e) {
             throw new MarsRoverException("invalid input for Rovers");

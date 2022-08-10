@@ -1,6 +1,10 @@
 package com.unifyed.service.commands;
 
+import com.unifyed.model.Plataeu;
+import com.unifyed.model.Rover;
 import com.unifyed.service.commands.Command.Command;
+import com.unifyed.service.commands.Command.CommandFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * The LeftCommand is an implementation of commandInterface, RoboCommands. This class takes care of 
@@ -10,7 +14,12 @@ import com.unifyed.service.commands.Command.Command;
  * @author Sharvari Nagesh
  * 
  */
+@Component("L")
 public class LeftCommand implements Command {
+    @Override
+    public void execute(CommandFactory command, Rover rover, Plataeu plataeu) {
+
+    }
 //private Rover rover;
 //
 //static

@@ -1,6 +1,5 @@
-package com.unifyed.config;
+package com.unifyed.controller;
 
-import com.unifyed.MarsMoverAppApplication;
 import com.unifyed.exception.MarsRoverException;
 import com.unifyed.model.Plataeu;
 import com.unifyed.model.RoverCommands;

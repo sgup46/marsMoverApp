@@ -1,8 +1,6 @@
 package com.unifyed;
 
-import com.sun.deploy.util.ArrayUtil;
-import com.unifyed.config.MarsMoverController;
-import com.unifyed.exception.MarsRoverException;
+import com.unifyed.controller.MarsMoverController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +8,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 @SpringBootApplication
 public class MarsMoverAppApplication {

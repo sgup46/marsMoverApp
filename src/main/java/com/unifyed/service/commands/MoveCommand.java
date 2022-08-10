@@ -1,6 +1,10 @@
 package com.unifyed.service.commands;
 
+import com.unifyed.model.Plataeu;
+import com.unifyed.model.Rover;
 import com.unifyed.service.commands.Command.Command;
+import com.unifyed.service.commands.Command.CommandFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * MoveCommand implements the RoboCommands interface. It takes care of calling the move function of the
@@ -13,7 +17,12 @@ import com.unifyed.service.commands.Command.Command;
  * @author Sushant Gupta
  *
  */
+@Component("M")
 public class MoveCommand implements Command {
+    @Override
+    public void execute(CommandFactory command, Rover rover, Plataeu plataeu) {
+
+    }
 //	private Rover rover;
 //	private String command;
 //	private Coordinates newXYCoordinates;

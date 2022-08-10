@@ -4,7 +4,7 @@ import com.unifyed.service.commands.Command.Command;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.LinkedHashSet;
+import java.util.List;
 
 /**
  
@@ -21,9 +21,9 @@ import java.util.LinkedHashSet;
 @ToString(callSuper=true, includeFieldNames=true)
 public class RoverCommands {
 	private Rover rover;
-	private LinkedHashSet<Command> roverCommands;
+	private List<Command> roverCommands;
 
-	public RoverCommands(final Rover rover, LinkedHashSet<Command> roverCommands) {
+	public RoverCommands(final Rover rover, List<Command> roverCommands) {
 		this.rover = rover;
 		this.roverCommands = roverCommands;
 	}

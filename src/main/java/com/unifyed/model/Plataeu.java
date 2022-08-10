@@ -1,6 +1,5 @@
 package com.unifyed.model;
 
-import com.unifyed.service.commands.Command.Command;
 import lombok.Data;
 import lombok.ToString;
 
