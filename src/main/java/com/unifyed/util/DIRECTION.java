@@ -1,4 +1,6 @@
-package com.unifyed.model;
+package com.unifyed.util;
+
+import com.unifyed.model.Coordinates;
 
 /**
  * Robot directions are defined in the enum DIRECTIONS. This way, directions are predefined.
@@ -43,6 +45,6 @@ public enum DIRECTION {
 			return xy;
 		}
 	};
-	public final int NOOFDIRECTIONS = 4;
+	public final int NO_OF_DIRECTIONS = 4;
 	public abstract Coordinates moveInDirection(Coordinates xy);
 }

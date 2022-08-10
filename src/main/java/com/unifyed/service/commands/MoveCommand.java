@@ -1,5 +1,7 @@
 package com.unifyed.service.commands;
 
+import com.unifyed.exception.MarsRoverException;
+import com.unifyed.model.Coordinates;
 import com.unifyed.model.Plataeu;
 import com.unifyed.model.Rover;
 import com.unifyed.service.commands.Command.Command;
@@ -19,42 +21,17 @@ import org.springframework.stereotype.Component;
  */
 @Component("M")
 public class MoveCommand implements Command {
-    @Override
-    public void execute(CommandFactory command, Rover rover, Plataeu plataeu) {
 
+    @Override
+    public void execute(Rover rover, Plataeu plataeu) {
+        Coordinates newCoordinates = new Coordinates(rover.getCoordinates());
+        newCoordinates = rover.getDirection().moveInDirection(newCoordinates);
+        if (plataeu.canProceed(newCoordinates)) {
+            rover.setCoordinates(newCoordinates);
+        } else {
+            throw new MarsRoverException("Unable to place rover:" + rover + " on new coordinates: " +
+                    newCoordinates + " having plateu: " + plataeu);
+        }
     }
-//	private Rover rover;
-//	private String command;
-//	private Coordinates newXYCoordinates;
-//	private DIRECTIONS robotDirection;
-//	static
-//	{
-//		Rover tempRobot = null;
-//		CommandFactory.getInstance().registerCommand("MOVE", new MoveCommand(tempRobot, ""));
-//	}
-//  public MoveCommand(Rover robot, String command)
-//  {
-//	this.rover = robot;
-//	this.command = command;
-//  }
-//
-//  public String execute()
-//  {
-//	  if(rover != null && rover.isRobotPlaced())
-//	  {
-//		  newXYCoordinates = new Coordinates(rover.getCoordinates());
-//		  robotDirection = rover.getDirection();
-//		  newXYCoordinates = robotDirection.moveInDirection(newXYCoordinates);
-//		  if(Plataeu.getInstance().isOnTable(newXYCoordinates))
-//		  {
-//		    rover.move();
-//		  }
-//	  }
-//	return null;
-//  }
-//
-//  public MoveCommand createCommandObject(Rover robot, String commandLine)
-//	{
-//		return new MoveCommand(robot, commandLine);
-//	}
+
 }

@@ -25,12 +25,9 @@ class MarsMoverAppApplicationTests {
 
 	@Test
 	public void testRoverCommandsSample() {
-		marsMoverController.processInput("src/test/resources/RoverCommandsSample.txt");
-//		Assertions.assertNotNull(theatres.get(0).getTheater_id());
-//		Assertions.assertNotNull(theatres.get(0).getTheater_name());
-//		Assertions.assertNotNull(theatres.get(0).getTheater_name().equals("Finox mall"));
-//		Assertions.assertNotNull(theatres.get(0).getTheater_area());
-//		Assertions.assertNotNull(theatres.get(0).getTheater_area().equals("Koramangala"));
+		String output = marsMoverController.processInput("src/test/resources/RoverCommandsSample.txt");
+		Assertions.assertEquals(output, "1 3 N\n" +
+				                               "5 1 E");
 	}
 //
 //	@Test

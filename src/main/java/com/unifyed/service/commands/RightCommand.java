@@ -3,7 +3,7 @@ package com.unifyed.service.commands;
 import com.unifyed.model.Plataeu;
 import com.unifyed.model.Rover;
 import com.unifyed.service.commands.Command.Command;
-import com.unifyed.service.commands.Command.CommandFactory;
+import com.unifyed.util.DIRECTION;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,39 +11,19 @@ import org.springframework.stereotype.Component;
  * calling the robot's method to turn "RIGHT". This class checks if the Robot is placed properly before
  * executing Robot's methods.
  *
- * @author Sharvari Nagesh
+ * @author Sushant
  * 
  */
 @Component("R")
 public class RightCommand implements Command {
-    @Override
-    public void execute(CommandFactory command, Rover rover, Plataeu plataeu) {
 
+    @Override
+    public void execute(Rover rover, Plataeu plataeu) {
+        DIRECTION direction = rover.getDirection();
+        int index = rover.getDirection().ordinal();
+        index = (index + 1) % direction.NO_OF_DIRECTIONS;
+        direction = DIRECTION.values()[index];
+        rover.setDirection(direction);
     }
-//private Rover rover;
-//
-//static
-//{
-//	Rover tempRobot = null;
-//	CommandFactory.getInstance().registerCommand("RIGHT", new RightCommand(tempRobot, ""));
-//}
-//	public RightCommand(Rover robot, String command)
-//	{
-//	   this.rover = robot;
-//	}
-//
-//	public RightCommand createCommandObject(Rover robot, String commandLine)
-//	{
-//		return new RightCommand(robot, commandLine);
-//	}
-//
-//	public String execute()
-//	{
-//		if(rover != null && rover.isRobotPlaced())
-//		{
-//			rover.turnRight();
-//		}
-//		return null;
-//
-//	}
+
 }

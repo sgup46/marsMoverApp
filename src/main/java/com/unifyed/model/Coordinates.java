@@ -29,6 +29,12 @@ public class Coordinates {
 		yCoordinate = y;
 	}
 
+	//Defining a copy constructor
+	public Coordinates(Coordinates xy){
+		this.xCoordinate = xy.getXCoordinate();
+		this.yCoordinate = xy.getYCoordinate();
+	}
+
 	public void incrementX(){
 		xCoordinate++;
 	}
@@ -42,7 +48,7 @@ public class Coordinates {
 		yCoordinate--;
 	}
 
-//	public boolean isCoordinatesSet(){
-//		return ((xCoordinate >= 0) && (yCoordinate >=0))? true : false;
-//	}
+	public boolean validateCoordinate(){
+		return ((xCoordinate >= 0) && (yCoordinate >=0))? true : false;
+	}
 }

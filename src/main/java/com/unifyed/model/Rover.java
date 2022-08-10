@@ -1,5 +1,6 @@
 package com.unifyed.model;
 
+import com.unifyed.util.DIRECTION;
 import lombok.Data;
 import lombok.ToString;
 
@@ -15,16 +16,21 @@ import lombok.ToString;
  */
 
 @Data
-@ToString(callSuper=true, includeFieldNames=true)
+//@ToString(callSuper=true, includeFieldNames=true)
 public class Rover {
 	private DIRECTION direction;
-	private Coordinates xycoordinates;
+	private Coordinates coordinates;
 	public Rover(final DIRECTION direction, final Coordinates xycoordinates)
 	{
 		this.direction = direction;
-		this.xycoordinates = xycoordinates;
+		this.coordinates = xycoordinates;
 	}
-	
+
+	@Override
+	public String toString() {
+		return coordinates.getXCoordinate() + " " + coordinates.getYCoordinate() + " " + direction.name();
+	}
+
 //	/*
 //	 * getCoordinates has to return a copy
 //	 */

@@ -2,7 +2,8 @@ package com.unifyed.service;
 
 import com.unifyed.exception.MarsRoverException;
 import com.unifyed.model.Coordinates;
-import com.unifyed.model.DIRECTION;
+import com.unifyed.service.Iservice.InputService;
+import com.unifyed.util.DIRECTION;
 import com.unifyed.model.Rover;
 import com.unifyed.model.RoverCommands;
 import com.unifyed.service.commands.Command.Command;
@@ -12,16 +13,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedHashSet;
 import java.util.List;
 
 @Service
-public class RoverService  implements MarsMoverService<List<String>, RoverCommands>{
+public class MarsMoverRoverInputService implements InputService<List<String>, RoverCommands> {
     @Autowired
     private CommandFactory commandFactory;
 
     @Override
-    public RoverCommands process(List<String> inputs) {
+    public RoverCommands processInput(List<String> inputs) {
 
         try {
             String roverinput[] = inputs.get(0).split(" ");

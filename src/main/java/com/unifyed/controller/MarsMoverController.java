@@ -3,9 +3,10 @@ package com.unifyed.controller;
 import com.unifyed.exception.MarsRoverException;
 import com.unifyed.model.Plataeu;
 import com.unifyed.model.RoverCommands;
-import com.unifyed.service.PlateuService;
-import com.unifyed.service.RoverCommandService;
-import com.unifyed.service.RoverService;
+import com.unifyed.service.MarsMoverOutputService;
+import com.unifyed.service.MarsMoverPlateuInputService;
+import com.unifyed.service.MarsMoverProcessService;
+import com.unifyed.service.MarsMoverRoverInputService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,18 +20,21 @@ import java.util.Scanner;
 public class MarsMoverController {
 
     @Autowired
-    private PlateuService plateuService;
+    private MarsMoverPlateuInputService plateuService;
 
     @Autowired
-    private RoverService roverService;
+    private MarsMoverRoverInputService roverService;
 
     @Autowired
-    private RoverCommandService roverCommandService;
+    private MarsMoverProcessService roverCommandService;
+
+    @Autowired
+    private MarsMoverOutputService marsMoverOutputService;
 
 
     Logger logger = LoggerFactory.getLogger(MarsMoverController.class);
 
-    public void processInput(String fileName) {
+    public String processInput(String fileName) {
         try {
             logger.error("Going to process file :" + fileName);
             Scanner inputScanner = new Scanner(new File(fileName));
@@ -41,7 +45,7 @@ public class MarsMoverController {
             }
 
             String plateuInput = inputScanner.nextLine();
-            Plataeu plataeu = plateuService.process(Arrays.asList(plateuInput));
+            Plataeu plataeu = plateuService.processInput(Arrays.asList(plateuInput));
             logger.info(plataeu.toString());
 
             String roverInput = null;
@@ -51,9 +55,14 @@ public class MarsMoverController {
             while (inputScanner.hasNextLine()) {
                 roverInput = inputScanner.nextLine();
                 roverCommandsInput = inputScanner.nextLine();
-                roverCommands = roverService.process(Arrays.asList(roverInput, roverCommandsInput));
+                roverCommands = roverService.processInput(Arrays.asList(roverInput, roverCommandsInput));
                 logger.info(roverCommands.toString());
+
+                // final process each rover sequentially with rover commands
+                roverCommandService.process(roverCommands, plataeu);
             }
+
+            return marsMoverOutputService.processOutput(plataeu);
 
         } catch (Exception e) {
             throw new MarsRoverException(e.getMessage());

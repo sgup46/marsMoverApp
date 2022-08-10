@@ -451,7 +451,7 @@ Caused by: java.lang.NullPointerException: null
 2022-08-10 15:40:08,269 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 12816 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
 2022-08-10 15:40:08,269 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
 2022-08-10 15:40:08,269 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-08-10 15:40:09,520 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-08-10 15:40:09,520 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2022-08-10 15:40:09,537 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
@@ -463,7 +463,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field plateuService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.PlateuService' that could not be found.
+Field plateuService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.MarsMoverPlateuInputService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -471,7 +471,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.unifyed.service.PlateuService' in your configuration.
+Consider defining a bean of type 'com.unifyed.service.MarsMoverPlateuInputService' in your configuration.
 
 2022-08-10 15:40:09,687 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@56cdfb3b] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@63bde6c2]
 java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -541,7 +541,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -562,7 +562,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 65 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -578,7 +578,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
 	... 83 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
@@ -587,7 +587,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2022-08-10 15:40:09,738 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 12816 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
 2022-08-10 15:40:09,738 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
 2022-08-10 15:40:09,738 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2022-08-10 15:40:10,037 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-08-10 15:40:10,037 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2022-08-10 15:40:10,038 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
@@ -599,7 +599,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field plateuService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.PlateuService' that could not be found.
+Field plateuService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.MarsMoverPlateuInputService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -607,7 +607,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.unifyed.service.PlateuService' in your configuration.
+Consider defining a bean of type 'com.unifyed.service.MarsMoverPlateuInputService' in your configuration.
 
 2022-08-10 15:40:10,156 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@56cdfb3b] to prepare test instance [com.unifyed.MarsMoverAppApplicationTests@17143b3b]
 java.lang.IllegalStateException: Failed to load ApplicationContext
@@ -677,7 +677,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
 	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235)
 	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -698,7 +698,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	... 65 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -714,7 +714,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
 	... 83 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1716)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1272)
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226)
@@ -731,7 +731,7 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2022-08-10 15:40:55,001 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
 2022-08-10 15:40:55,101 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
 2022-08-10 15:40:55,101 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1861 ms
-2022-08-10 15:40:55,384 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.PlateuService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2022-08-10 15:40:55,384 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverAppApplication': Unsatisfied dependency expressed through field 'marsMoverController'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'marsMoverController': Unsatisfied dependency expressed through field 'plateuService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.unifyed.service.MarsMoverPlateuInputService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2022-08-10 15:40:55,470 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
 2022-08-10 15:40:55,484 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
 
@@ -744,7 +744,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field plateuService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.PlateuService' that could not be found.
+Field plateuService in com.unifyed.controller.MarsMoverController required a bean of type 'com.unifyed.service.MarsMoverPlateuInputService' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -752,7 +752,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.unifyed.service.PlateuService' in your configuration.
+Consider defining a bean of type 'com.unifyed.service.MarsMoverPlateuInputService' in your configuration.
 
 2022-08-10 15:41:25,600 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 14612 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
 2022-08-10 15:41:25,617 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
@@ -906,3 +906,556 @@ Caused by: com.unifyed.exception.MarsRoverException: invalid input for Rovers
 2022-08-10 15:59:52,266 INFO com.unifyed.controller.MarsMoverController [restartedMain] Plataeu(super=com.unifyed.model.Plataeu@36792, width=5, breadth=5, rovers=null)
 2022-08-10 15:59:52,266 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@d902b097, rover=Rover(super=com.unifyed.model.Rover@a3d7731f, direction=N, xycoordinates=Coordinates(super=com.unifyed.model.Coordinates@dd6, xCoordinate=1, yCoordinate=2)), roverCommands=[com.unifyed.service.commands.LeftCommand@5c0dd840, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.LeftCommand@5c0dd840, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.LeftCommand@5c0dd840, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.LeftCommand@5c0dd840, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.MoveCommand@3a5083c2])
 2022-08-10 15:59:52,266 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@e3430079, rover=Rover(super=com.unifyed.model.Rover@c3ae4e6d, direction=E, xycoordinates=Coordinates(super=com.unifyed.model.Coordinates@e4d, xCoordinate=3, yCoordinate=3)), roverCommands=[com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.RightCommand@c3c5cb1, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.RightCommand@c3c5cb1, com.unifyed.service.commands.MoveCommand@3a5083c2, com.unifyed.service.commands.RightCommand@c3c5cb1, com.unifyed.service.commands.RightCommand@c3c5cb1, com.unifyed.service.commands.MoveCommand@3a5083c2])
+2022-08-10 16:02:14,192 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 16:02:22,607 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 10608 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 16:02:22,607 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 16:02:22,607 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 16:02:24,157 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 16:02:24,757 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 16:02:24,825 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 2.645 seconds (JVM running for 3.838)
+2022-08-10 16:02:24,857 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 16:02:24,857 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 16:02:25,124 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 16:02:25,141 INFO com.unifyed.controller.MarsMoverController [main] Plataeu(super=com.unifyed.model.Plataeu@36792, width=5, breadth=5, rovers=null)
+2022-08-10 16:02:25,141 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@ba73e45e, rover=Rover(super=com.unifyed.model.Rover@91bde397, direction=N, xycoordinates=Coordinates(super=com.unifyed.model.Coordinates@dd6, xCoordinate=1, yCoordinate=2)), roverCommands=[com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.MoveCommand@306f6f1d])
+2022-08-10 16:02:25,141 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@85f62084, rover=Rover(super=com.unifyed.model.Rover@cebbd7fe, direction=E, xycoordinates=Coordinates(super=com.unifyed.model.Coordinates@e4d, xCoordinate=3, yCoordinate=3)), roverCommands=[com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.RightCommand@6fc6deb7, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.RightCommand@6fc6deb7, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.RightCommand@6fc6deb7, com.unifyed.service.commands.RightCommand@6fc6deb7, com.unifyed.service.commands.MoveCommand@306f6f1d])
+2022-08-10 16:02:25,174 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 16:16:47,411 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 540 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 16:16:47,411 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 16:16:47,411 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 16:16:49,355 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 16:16:50,013 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 16:16:50,089 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 3.129 seconds (JVM running for 4.564)
+2022-08-10 16:16:50,122 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 16:16:50,122 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 16:16:50,339 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 16:16:50,339 INFO com.unifyed.controller.MarsMoverController [main] Plataeu(super=com.unifyed.model.Plataeu@36792, width=5, breadth=5, rovers=null)
+2022-08-10 16:16:55,322 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@e9d57a7e, rover=Rover(super=com.unifyed.model.Rover@8da971f6, direction=N, xycoordinates=Coordinates(super=com.unifyed.model.Coordinates@dd6, xCoordinate=1, yCoordinate=2)), roverCommands=[com.unifyed.service.commands.LeftCommand@b022551, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.LeftCommand@b022551, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.LeftCommand@b022551, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.LeftCommand@b022551, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.MoveCommand@3e14d390])
+2022-08-10 16:17:10,540 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@6c84b2d4, rover=Rover(super=com.unifyed.model.Rover@d482a9ce, direction=E, xycoordinates=Coordinates(super=com.unifyed.model.Coordinates@e4d, xCoordinate=3, yCoordinate=3)), roverCommands=[com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.RightCommand@2b999ee8, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.RightCommand@2b999ee8, com.unifyed.service.commands.MoveCommand@3e14d390, com.unifyed.service.commands.RightCommand@2b999ee8, com.unifyed.service.commands.RightCommand@2b999ee8, com.unifyed.service.commands.MoveCommand@3e14d390])
+2022-08-10 16:17:10,572 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:42:41,746 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 8648 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:42:41,762 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:42:41,762 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:42:41,828 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:42:41,828 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:42:44,010 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:42:44,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:42:44,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:42:44,027 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:42:44,160 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:42:44,160 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2332 ms
+2022-08-10 18:42:44,810 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:42:45,077 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:42:45,077 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:42:45,127 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:42:45,148 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:42:45,160 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 4.144 seconds (JVM running for 4.856)
+2022-08-10 18:42:45,210 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:42:45,210 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:42:45,210 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:42:45,228 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@23a9f456, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@53c437eb, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.LeftCommand@53c437eb, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.LeftCommand@53c437eb, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.LeftCommand@53c437eb, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.MoveCommand@6225cfe7])
+2022-08-10 18:42:45,228 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@7eaf8b1c, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.RightCommand@5c8e5787, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.RightCommand@5c8e5787, com.unifyed.service.commands.MoveCommand@6225cfe7, com.unifyed.service.commands.RightCommand@5c8e5787, com.unifyed.service.commands.RightCommand@5c8e5787, com.unifyed.service.commands.MoveCommand@6225cfe7])
+2022-08-10 18:42:45,228 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 18:42:45,228 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.unifyed.MarsMoverAppApplication.main(MarsMoverAppApplication.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.unifyed.exception.MarsRoverException: Unable to place rover:4 3 E on new coordinates: Coordinates(super=com.unifyed.model.Coordinates@ec3, xCoordinate=5, yCoordinate=3) having plateu: 5 5
+	at com.unifyed.controller.MarsMoverController.processInput(MarsMoverController.java:63)
+	at com.unifyed.MarsMoverAppApplication.lambda$commandLineRunnerBean$0(MarsMoverAppApplication.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+2022-08-10 18:42:45,228 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:44:24,671 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 23984 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:44:24,688 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:44:24,688 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:44:24,755 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:44:24,755 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:44:26,871 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:44:26,889 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:44:26,889 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:44:26,889 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:44:27,021 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:44:27,021 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2266 ms
+2022-08-10 18:44:27,621 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:44:27,890 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:44:27,890 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:44:27,937 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:44:27,971 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:44:27,971 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 4.031 seconds (JVM running for 4.971)
+2022-08-10 18:44:28,021 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:44:38,321 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:44:38,327 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:44:56,440 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@e8024596, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@6de11446, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.LeftCommand@6de11446, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.LeftCommand@6de11446, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.LeftCommand@6de11446, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.MoveCommand@799f9714])
+2022-08-10 18:49:01,204 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@bce985ac, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.RightCommand@1705bff6, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.RightCommand@1705bff6, com.unifyed.service.commands.MoveCommand@799f9714, com.unifyed.service.commands.RightCommand@1705bff6, com.unifyed.service.commands.RightCommand@1705bff6, com.unifyed.service.commands.MoveCommand@799f9714])
+2022-08-10 18:50:24,257 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 18:50:24,257 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.unifyed.MarsMoverAppApplication.main(MarsMoverAppApplication.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.unifyed.exception.MarsRoverException: Unable to place rover:4 3 E on new coordinates: Coordinates(super=com.unifyed.model.Coordinates@ec3, xCoordinate=5, yCoordinate=3) having plateu: 5 5
+	at com.unifyed.controller.MarsMoverController.processInput(MarsMoverController.java:63)
+	at com.unifyed.MarsMoverAppApplication.lambda$commandLineRunnerBean$0(MarsMoverAppApplication.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+2022-08-10 18:50:24,257 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:50:38,837 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 4772 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:50:38,837 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:50:38,837 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:50:38,917 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:50:38,917 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:50:40,737 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:50:40,748 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:50:40,748 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:50:40,764 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:50:40,865 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:50:40,865 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1948 ms
+2022-08-10 18:50:41,338 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:50:41,565 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:50:41,582 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:50:41,616 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:50:41,649 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:50:41,649 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.423 seconds (JVM running for 4.051)
+2022-08-10 18:50:41,682 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:50:41,682 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:50:41,699 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:50:41,699 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@ec0c3b14, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@47e083a7, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.LeftCommand@47e083a7, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.LeftCommand@47e083a7, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.LeftCommand@47e083a7, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.MoveCommand@4de98701])
+2022-08-10 18:50:41,699 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@6b2dda00, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.RightCommand@3e50184b, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.RightCommand@3e50184b, com.unifyed.service.commands.MoveCommand@4de98701, com.unifyed.service.commands.RightCommand@3e50184b, com.unifyed.service.commands.RightCommand@3e50184b, com.unifyed.service.commands.MoveCommand@4de98701])
+2022-08-10 18:50:41,699 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 18:50:41,699 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.unifyed.MarsMoverAppApplication.main(MarsMoverAppApplication.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.unifyed.exception.MarsRoverException: -1
+	at com.unifyed.controller.MarsMoverController.processInput(MarsMoverController.java:63)
+	at com.unifyed.MarsMoverAppApplication.lambda$commandLineRunnerBean$0(MarsMoverAppApplication.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+2022-08-10 18:50:41,699 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:51:12,221 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 7888 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:51:12,239 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:51:12,240 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:51:12,317 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:51:12,317 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:51:15,086 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:51:15,107 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:51:15,108 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:51:15,109 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:51:15,264 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:51:15,264 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2947 ms
+2022-08-10 18:51:15,968 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:51:16,407 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:51:16,416 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:51:16,464 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:51:16,507 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:51:16,518 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 5.181 seconds (JVM running for 6.066)
+2022-08-10 18:51:16,570 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:51:19,880 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:51:19,896 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:51:21,380 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@fad36a0b, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@30103c28, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.LeftCommand@30103c28, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.LeftCommand@30103c28, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.LeftCommand@30103c28, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.MoveCommand@49cc7974])
+2022-08-10 18:51:35,763 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@29eb4ff4, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.RightCommand@7a577a6e, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.RightCommand@7a577a6e, com.unifyed.service.commands.MoveCommand@49cc7974, com.unifyed.service.commands.RightCommand@7a577a6e, com.unifyed.service.commands.RightCommand@7a577a6e, com.unifyed.service.commands.MoveCommand@49cc7974])
+2022-08-10 18:52:01,394 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-08-10 18:52:01,394 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.unifyed.MarsMoverAppApplication.main(MarsMoverAppApplication.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: com.unifyed.exception.MarsRoverException: -1
+	at com.unifyed.controller.MarsMoverController.processInput(MarsMoverController.java:63)
+	at com.unifyed.MarsMoverAppApplication.lambda$commandLineRunnerBean$0(MarsMoverAppApplication.java:30)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
+	... 10 common frames omitted
+2022-08-10 18:52:01,411 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:53:16,260 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 8276 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:53:16,265 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:53:16,267 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:53:16,332 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:53:16,333 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:53:18,206 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:53:18,206 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:53:18,206 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:53:18,206 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:53:18,323 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:53:18,323 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1990 ms
+2022-08-10 18:53:18,806 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:53:19,039 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:53:19,039 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:53:19,073 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:53:19,106 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:53:19,106 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.549 seconds (JVM running for 4.256)
+2022-08-10 18:53:19,139 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:53:19,139 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:53:19,139 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:53:19,147 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@b43c4c80, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@5218a41, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.LeftCommand@5218a41, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.LeftCommand@5218a41, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.LeftCommand@5218a41, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.MoveCommand@4de69c81])
+2022-08-10 18:53:19,147 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@5aa50c14, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.RightCommand@5cf3139a, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.RightCommand@5cf3139a, com.unifyed.service.commands.MoveCommand@4de69c81, com.unifyed.service.commands.RightCommand@5cf3139a, com.unifyed.service.commands.RightCommand@5cf3139a, com.unifyed.service.commands.MoveCommand@4de69c81])
+2022-08-10 18:53:35,691 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:54:28,977 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 20508 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:54:28,985 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:54:28,985 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:54:29,035 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:54:29,035 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:54:30,952 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:54:30,969 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:54:30,969 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:54:30,969 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:54:31,068 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:54:31,084 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2049 ms
+2022-08-10 18:54:31,535 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:54:31,769 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:54:31,785 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:54:31,818 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:54:31,836 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:54:31,852 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.404 seconds (JVM running for 4.024)
+2022-08-10 18:54:31,885 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:54:31,885 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:54:31,885 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:54:31,885 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@d9f908c8, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@fb2a785, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.LeftCommand@fb2a785, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.LeftCommand@fb2a785, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.LeftCommand@fb2a785, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.MoveCommand@b287b55])
+2022-08-10 18:54:31,885 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@6fbb87d7, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.RightCommand@f276bea, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.RightCommand@f276bea, com.unifyed.service.commands.MoveCommand@b287b55, com.unifyed.service.commands.RightCommand@f276bea, com.unifyed.service.commands.RightCommand@f276bea, com.unifyed.service.commands.MoveCommand@b287b55])
+2022-08-10 18:54:31,885 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] [1 3 N, 5 1 E]
+2022-08-10 18:54:31,901 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:55:06,283 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 22868 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 18:55:06,283 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 18:55:06,292 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 18:55:06,358 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 18:55:06,366 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 18:55:08,183 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 18:55:08,183 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:55:08,183 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 18:55:08,183 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 18:55:08,299 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 18:55:08,299 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1933 ms
+2022-08-10 18:55:08,767 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 18:55:09,016 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 18:55:09,016 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 18:55:09,067 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 18:55:09,099 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 18:55:09,099 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.351 seconds (JVM running for 3.966)
+2022-08-10 18:55:09,133 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 18:55:09,133 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 18:55:09,133 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 18:55:09,149 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@cd1005b4, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@1ada1d1b, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.LeftCommand@1ada1d1b, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.LeftCommand@1ada1d1b, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.LeftCommand@1ada1d1b, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.MoveCommand@3298e4d9])
+2022-08-10 18:55:09,149 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@66a426f8, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.RightCommand@5f4f9eaa, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.RightCommand@5f4f9eaa, com.unifyed.service.commands.MoveCommand@3298e4d9, com.unifyed.service.commands.RightCommand@5f4f9eaa, com.unifyed.service.commands.RightCommand@5f4f9eaa, com.unifyed.service.commands.MoveCommand@3298e4d9])
+2022-08-10 18:55:09,149 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] [1 3 N, 5 1 E]
+2022-08-10 18:55:09,149 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:03:39,690 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 22168 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:03:39,694 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:03:39,696 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:03:39,771 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:03:39,771 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:03:41,892 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:03:41,902 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:03:41,902 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:03:41,902 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:03:42,019 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:03:42,019 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2248 ms
+2022-08-10 19:03:42,619 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:03:42,902 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:03:42,902 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:03:42,957 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:03:42,985 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:03:43,002 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.985 seconds (JVM running for 4.696)
+2022-08-10 19:03:43,035 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:03:43,035 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:03:43,052 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:03:43,057 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@79cf04d5, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@750cef1d, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.LeftCommand@750cef1d, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.LeftCommand@750cef1d, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.LeftCommand@750cef1d, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.MoveCommand@57fcfa1f])
+2022-08-10 19:03:43,057 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@f509bddb, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.RightCommand@1c454796, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.RightCommand@1c454796, com.unifyed.service.commands.MoveCommand@57fcfa1f, com.unifyed.service.commands.RightCommand@1c454796, com.unifyed.service.commands.RightCommand@1c454796, com.unifyed.service.commands.MoveCommand@57fcfa1f])
+2022-08-10 19:03:43,057 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N5 1 E
+
+2022-08-10 19:03:43,069 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:04:05,219 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 17108 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:04:05,223 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:04:05,225 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:04:05,286 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:04:05,286 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:04:07,300 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:04:07,317 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:04:07,317 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:04:07,317 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:04:07,434 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:04:07,434 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2148 ms
+2022-08-10 19:04:07,988 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:04:08,217 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:04:08,217 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:04:08,275 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:04:08,308 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:04:08,308 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.783 seconds (JVM running for 4.476)
+2022-08-10 19:04:08,334 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:04:08,334 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:04:08,351 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:04:08,351 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@815014a7, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@7ad160f0, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.LeftCommand@7ad160f0, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.LeftCommand@7ad160f0, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.LeftCommand@7ad160f0, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.MoveCommand@66129ecf])
+2022-08-10 19:04:08,351 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@855594e4, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.RightCommand@50cf6dd3, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.RightCommand@50cf6dd3, com.unifyed.service.commands.MoveCommand@66129ecf, com.unifyed.service.commands.RightCommand@50cf6dd3, com.unifyed.service.commands.RightCommand@50cf6dd3, com.unifyed.service.commands.MoveCommand@66129ecf])
+2022-08-10 19:04:08,351 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N5 1 E
+
+2022-08-10 19:04:08,359 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:04:59,517 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 24188 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:04:59,522 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:04:59,522 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:04:59,601 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:04:59,602 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:05:01,681 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:05:01,697 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:05:01,697 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:05:01,697 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:05:01,832 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:05:01,832 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2230 ms
+2022-08-10 19:05:03,287 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:05:03,736 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:05:03,750 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:05:03,814 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:05:03,831 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:05:03,848 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 5.199 seconds (JVM running for 6.058)
+2022-08-10 19:05:03,897 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:05:03,898 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:05:03,898 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:05:03,898 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@2da8dac9, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@e81ac06, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.LeftCommand@e81ac06, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.LeftCommand@e81ac06, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.LeftCommand@e81ac06, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.MoveCommand@3e0da0b])
+2022-08-10 19:05:03,898 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@fec4a63b, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.RightCommand@663e054e, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.RightCommand@663e054e, com.unifyed.service.commands.MoveCommand@3e0da0b, com.unifyed.service.commands.RightCommand@663e054e, com.unifyed.service.commands.RightCommand@663e054e, com.unifyed.service.commands.MoveCommand@3e0da0b])
+2022-08-10 19:05:03,898 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N5 1 E
+
+2022-08-10 19:05:03,915 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:05:16,673 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 24264 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:05:16,677 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:05:16,678 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:05:16,746 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:05:16,746 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:05:18,596 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:05:18,613 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:05:18,613 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:05:18,613 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:05:18,729 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:05:18,729 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1982 ms
+2022-08-10 19:05:19,230 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:05:19,480 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:05:19,480 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:05:19,529 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:05:19,556 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:05:19,556 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.527 seconds (JVM running for 4.268)
+2022-08-10 19:05:19,596 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:05:19,596 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:05:19,596 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:05:19,613 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@b6b1aab8, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@1a4ca91b, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.LeftCommand@1a4ca91b, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.LeftCommand@1a4ca91b, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.LeftCommand@1a4ca91b, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.MoveCommand@b227352])
+2022-08-10 19:05:19,613 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@80987635, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.RightCommand@9e5cf41, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.RightCommand@9e5cf41, com.unifyed.service.commands.MoveCommand@b227352, com.unifyed.service.commands.RightCommand@9e5cf41, com.unifyed.service.commands.RightCommand@9e5cf41, com.unifyed.service.commands.MoveCommand@b227352])
+2022-08-10 19:05:19,613 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N5 1 E\n
+2022-08-10 19:05:19,613 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:05:57,924 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 7960 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:05:57,928 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:05:57,928 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:05:57,994 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:05:57,994 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:05:59,794 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:05:59,810 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:05:59,810 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:05:59,810 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:05:59,927 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:05:59,927 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1933 ms
+2022-08-10 19:06:00,451 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:06:00,677 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:06:00,694 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:06:00,751 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:06:00,777 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:06:00,777 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.42 seconds (JVM running for 4.029)
+2022-08-10 19:06:00,810 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:06:00,811 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:06:00,811 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:06:00,811 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@c0dc47a, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@4e47ea5f, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.LeftCommand@4e47ea5f, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.LeftCommand@4e47ea5f, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.LeftCommand@4e47ea5f, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.MoveCommand@461d2ef1])
+2022-08-10 19:06:00,811 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@525c182d, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.RightCommand@2393a4ce, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.RightCommand@2393a4ce, com.unifyed.service.commands.MoveCommand@461d2ef1, com.unifyed.service.commands.RightCommand@2393a4ce, com.unifyed.service.commands.RightCommand@2393a4ce, com.unifyed.service.commands.MoveCommand@461d2ef1])
+2022-08-10 19:06:00,811 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N
+5 1 E
+
+2022-08-10 19:06:00,811 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:06:16,561 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 24128 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:06:16,570 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:06:16,571 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:06:16,646 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:06:16,646 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:06:18,759 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:06:18,778 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:06:18,778 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:06:18,781 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:06:18,893 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:06:18,893 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2247 ms
+2022-08-10 19:06:19,443 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:06:19,699 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:06:19,699 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:06:19,760 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:06:19,793 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:06:19,798 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 4.026 seconds (JVM running for 4.868)
+2022-08-10 19:06:19,827 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:06:21,676 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:06:21,677 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:06:22,181 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@7a565de7, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@3e6fe6a6, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.LeftCommand@3e6fe6a6, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.LeftCommand@3e6fe6a6, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.LeftCommand@3e6fe6a6, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.MoveCommand@3fac2fad])
+2022-08-10 19:06:52,859 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@cdab94bc, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.RightCommand@550ae3e2, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.RightCommand@550ae3e2, com.unifyed.service.commands.MoveCommand@3fac2fad, com.unifyed.service.commands.RightCommand@550ae3e2, com.unifyed.service.commands.RightCommand@550ae3e2, com.unifyed.service.commands.MoveCommand@3fac2fad])
+2022-08-10 19:07:22,948 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N
+5 1 E
+
+2022-08-10 19:07:22,972 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:07:37,605 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 3628 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:07:37,624 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:07:37,624 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:07:37,671 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:07:37,671 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:07:39,705 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:07:39,722 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:07:39,722 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:07:39,722 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:07:39,857 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:07:39,857 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2186 ms
+2022-08-10 19:07:40,437 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:07:40,699 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:07:40,708 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:07:40,831 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:07:40,857 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:07:40,872 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.956 seconds (JVM running for 4.817)
+2022-08-10 19:07:40,906 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:07:42,521 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:07:42,521 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:07:43,371 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@2e3d7854, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@50623e0f, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.LeftCommand@50623e0f, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.LeftCommand@50623e0f, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.LeftCommand@50623e0f, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.MoveCommand@72bf5152])
+2022-08-10 19:07:45,170 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@3c226e58, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.RightCommand@e77b3e1, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.RightCommand@e77b3e1, com.unifyed.service.commands.MoveCommand@72bf5152, com.unifyed.service.commands.RightCommand@e77b3e1, com.unifyed.service.commands.RightCommand@e77b3e1, com.unifyed.service.commands.MoveCommand@72bf5152])
+2022-08-10 19:08:00,487 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N
+5 1 E
+2022-08-10 19:08:00,487 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:08:20,203 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 3320 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:08:20,213 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:08:20,213 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:08:22,152 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:08:22,919 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:08:22,986 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 3.221 seconds (JVM running for 4.626)
+2022-08-10 19:08:23,026 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:08:23,026 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:08:23,318 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:08:23,318 INFO com.unifyed.controller.MarsMoverController [main] 5 5
+2022-08-10 19:08:23,328 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@63b1a747, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@39bbd9e0, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.LeftCommand@39bbd9e0, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.LeftCommand@39bbd9e0, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.LeftCommand@39bbd9e0, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.MoveCommand@27fe9713])
+2022-08-10 19:08:23,328 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@7c68261e, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.RightCommand@77114efe, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.RightCommand@77114efe, com.unifyed.service.commands.MoveCommand@27fe9713, com.unifyed.service.commands.RightCommand@77114efe, com.unifyed.service.commands.RightCommand@77114efe, com.unifyed.service.commands.MoveCommand@27fe9713])
+2022-08-10 19:08:23,328 INFO com.unifyed.service.MarsMoverOutputService [main] 1 3 N
+5 1 E
+2022-08-10 19:08:23,337 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:09:30,448 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 10072 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:09:30,448 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:09:30,448 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:09:32,398 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:09:33,015 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:09:33,081 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 3.054 seconds (JVM running for 4.442)
+2022-08-10 19:09:33,115 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:09:33,115 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:09:33,131 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:10:14,662 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting MarsMoverAppApplication on LAPTOP-ETFPH0D4 with PID 8064 (C:\Users\susha\IdeaProjects\marsMoverApp\target\classes started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:10:14,671 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:10:14,671 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2022-08-10 19:10:14,731 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-08-10 19:10:14,731 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-08-10 19:10:16,633 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2022-08-10 19:10:16,647 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:10:16,647 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-08-10 19:10:16,647 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2022-08-10 19:10:16,754 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-08-10 19:10:16,754 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2023 ms
+2022-08-10 19:10:17,228 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:10:17,462 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-08-10 19:10:17,479 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:10:17,528 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8000"]
+2022-08-10 19:10:17,546 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2022-08-10 19:10:17,554 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started MarsMoverAppApplication in 3.466 seconds (JVM running for 4.153)
+2022-08-10 19:10:17,578 INFO com.unifyed.MarsMoverAppApplication [restartedMain] In CommandLineRunnerImpl 
+2022-08-10 19:10:17,578 ERROR com.unifyed.controller.MarsMoverController [restartedMain] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:10:17,594 INFO com.unifyed.controller.MarsMoverController [restartedMain] 5 5
+2022-08-10 19:10:17,594 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@aebf6c15, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@22708aaa, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.LeftCommand@22708aaa, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.LeftCommand@22708aaa, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.LeftCommand@22708aaa, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.MoveCommand@53af2b2d])
+2022-08-10 19:10:17,594 INFO com.unifyed.controller.MarsMoverController [restartedMain] RoverCommands(super=com.unifyed.model.RoverCommands@5b59a8ca, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.RightCommand@391e40b2, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.RightCommand@391e40b2, com.unifyed.service.commands.MoveCommand@53af2b2d, com.unifyed.service.commands.RightCommand@391e40b2, com.unifyed.service.commands.RightCommand@391e40b2, com.unifyed.service.commands.MoveCommand@53af2b2d])
+2022-08-10 19:10:17,594 INFO com.unifyed.service.MarsMoverOutputService [restartedMain] 1 3 N
+5 1 E
+2022-08-10 19:10:17,594 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:10:26,432 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 5408 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:10:26,432 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:10:26,432 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:10:28,595 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:10:29,327 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:10:29,395 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 3.429 seconds (JVM running for 4.799)
+2022-08-10 19:10:29,429 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:10:29,429 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:10:29,429 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:10:50,410 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 2540 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:10:50,410 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:10:50,410 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:10:52,277 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:10:52,977 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:10:53,043 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 3.143 seconds (JVM running for 4.381)
+2022-08-10 19:10:53,093 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:10:53,093 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:10:53,309 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:10:53,310 INFO com.unifyed.controller.MarsMoverController [main] 5 5
+2022-08-10 19:10:53,310 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@ba73e45e, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.LeftCommand@6f76c2cc, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.MoveCommand@306f6f1d])
+2022-08-10 19:10:53,310 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@f43e77f5, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.RightCommand@7da39774, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.RightCommand@7da39774, com.unifyed.service.commands.MoveCommand@306f6f1d, com.unifyed.service.commands.RightCommand@7da39774, com.unifyed.service.commands.RightCommand@7da39774, com.unifyed.service.commands.MoveCommand@306f6f1d])
+2022-08-10 19:10:53,310 INFO com.unifyed.service.MarsMoverOutputService [main] 1 3 N
+5 1 E
+2022-08-10 19:10:53,360 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:11:50,423 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 21944 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:11:50,423 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:11:50,423 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:11:52,223 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:11:52,907 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:11:52,973 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 2.987 seconds (JVM running for 4.294)
+2022-08-10 19:11:52,990 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:11:53,006 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:11:53,213 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:11:53,218 INFO com.unifyed.controller.MarsMoverController [main] 5 5
+2022-08-10 19:11:53,223 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@c42e828d, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@46a488c2, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.LeftCommand@46a488c2, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.LeftCommand@46a488c2, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.LeftCommand@46a488c2, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.MoveCommand@6242ae3b])
+2022-08-10 19:11:53,224 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@adb25687, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.RightCommand@43fda8d9, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.RightCommand@43fda8d9, com.unifyed.service.commands.MoveCommand@6242ae3b, com.unifyed.service.commands.RightCommand@43fda8d9, com.unifyed.service.commands.RightCommand@43fda8d9, com.unifyed.service.commands.MoveCommand@6242ae3b])
+2022-08-10 19:11:53,224 INFO com.unifyed.service.MarsMoverOutputService [main] 1 3 N
+5 1 E
+2022-08-10 19:11:53,261 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:12:38,070 INFO org.springframework.boot.StartupInfoLogger [main] Starting MarsMoverAppApplicationTests on LAPTOP-ETFPH0D4 with PID 17572 (started by susha in C:\Users\susha\IdeaProjects\marsMoverApp)
+2022-08-10 19:12:38,070 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.2.7.RELEASE, Spring v5.2.6.RELEASE
+2022-08-10 19:12:38,070 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-08-10 19:12:39,863 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-10 19:12:40,520 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 13 endpoint(s) beneath base path '/actuator'
+2022-08-10 19:12:40,587 INFO org.springframework.boot.StartupInfoLogger [main] Started MarsMoverAppApplicationTests in 2.955 seconds (JVM running for 4.277)
+2022-08-10 19:12:40,619 INFO com.unifyed.MarsMoverAppApplication [main] In CommandLineRunnerImpl 
+2022-08-10 19:12:40,619 ERROR com.unifyed.MarsMoverAppApplication [main] Invalid input to process
+2022-08-10 19:12:40,821 ERROR com.unifyed.controller.MarsMoverController [main] Going to process file :src/test/resources/RoverCommandsSample.txt
+2022-08-10 19:12:40,837 INFO com.unifyed.controller.MarsMoverController [main] 5 5
+2022-08-10 19:12:40,841 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@a847b354, rover=1 2 N, roverCommands=[com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.LeftCommand@367f0121, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.MoveCommand@7da39774])
+2022-08-10 19:12:40,841 INFO com.unifyed.controller.MarsMoverController [main] RoverCommands(super=com.unifyed.model.RoverCommands@ae846eb2, rover=3 3 E, roverCommands=[com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.MoveCommand@7da39774, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.RightCommand@32b0876c, com.unifyed.service.commands.MoveCommand@7da39774])
+2022-08-10 19:12:40,841 INFO com.unifyed.service.MarsMoverOutputService [main] 1 3 N
+5 1 E
+2022-08-10 19:12:40,870 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'

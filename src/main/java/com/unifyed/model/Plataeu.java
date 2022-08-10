@@ -3,7 +3,8 @@ package com.unifyed.model;
 import lombok.Data;
 import lombok.ToString;
 
-import java.util.LinkedHashSet;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 
@@ -21,20 +22,30 @@ import java.util.LinkedHashSet;
 @ToString(callSuper=true, includeFieldNames=true)
 public class Plataeu {
 
-	private int width = 5;
-	private int breadth = 5;
+	private int xAxisValue = 5;
+	private int yAxisValue = 5;
 
-	private LinkedHashSet<Rover> rovers;
+	// intialize with empty rovers
+	private List<Rover> rovers = new ArrayList<>();
 
 	public Plataeu(final int width, int breadth) {
-		this.width = width;
-		this.breadth = breadth;
+		this.xAxisValue = width;
+		this.yAxisValue = breadth;
 	}
-//	public boolean isOnTable(Coordinates xy)
-//	{
-//		int x = xy.getX();
-//		int y = xy.getY();
-//		return ((x<= width && x>=0) &&( y<=breadth && y>=0))?  true :  false;
-//	}
 
+	public boolean canProceed(Coordinates xy)
+	{
+		int x = xy.getXCoordinate();
+		int y = xy.getYCoordinate();
+		return ((x<= xAxisValue && x>=0) &&( y<= yAxisValue && y>=0))?  true :  false;
+	}
+
+	public void addRover(Rover rover) {
+		rovers.add(rover);
+	}
+
+	@Override
+	public String toString() {
+		return xAxisValue + " " + yAxisValue;
+	}
 }
