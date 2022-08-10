@@ -15,6 +15,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ *  * Class responsible for processing input for rovers
+ */
 @Service
 public class MarsMoverRoverInputService implements InputService<List<String>, RoverCommands> {
     @Autowired
@@ -24,14 +27,14 @@ public class MarsMoverRoverInputService implements InputService<List<String>, Ro
     public RoverCommands processInput(List<String> inputs) {
 
         try {
-            String roverinput[] = inputs.get(0).split(" ");
-            DIRECTION direction = DIRECTION.valueOf(roverinput[2]);
-            Coordinates coordinates = new Coordinates(Integer.parseInt(roverinput[0]), Integer.parseInt(roverinput[1]));
+            String roverInput[] = inputs.get(0).split(" ");
+            DIRECTION direction = DIRECTION.valueOf(roverInput[2]);
+            Coordinates coordinates = new Coordinates(Integer.parseInt(roverInput[0]), Integer.parseInt(roverInput[1]));
             Rover rover = new Rover(direction, coordinates);
 
             List<Command> roverCommands = new ArrayList<>();
-            String commandinput[] = inputs.get(1).split("");
-            Arrays.stream(commandinput).forEach(commandToProcess -> {
+            String commandInput[] = inputs.get(1).split("");
+            Arrays.stream(commandInput).forEach(commandToProcess -> {
                 roverCommands.add(commandFactory.getCommand(commandToProcess));
             });
             return new RoverCommands(rover, roverCommands);

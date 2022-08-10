@@ -8,11 +8,7 @@ import java.util.List;
 
 /**
  
- * This is the Robot class which will define the actual Robot. The Robot can be placed, 
- * it can move, turn RIGHT or LEFT. The Robot can also report it's position. A Robot's 
- * position is stored in XY coordinates which will be set when Robot is placed on a Table. 
- * Robot has a DIRECTION, which indicates the direction in which it is facing. When Robot
- * is made to move, it moves in the direction it is facing.
+ * This class will encapsulate the rover in action and list of commands send by RASA
  *  
  * @author Sushant Gupta
  */

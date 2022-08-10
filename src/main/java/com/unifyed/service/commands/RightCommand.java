@@ -7,9 +7,7 @@ import com.unifyed.util.DIRECTION;
 import org.springframework.stereotype.Component;
 
 /**
- * The RightCommand is an implementation of commandInterface, RoboCommands. This class takes care of 
- * calling the robot's method to turn "RIGHT". This class checks if the Robot is placed properly before
- * executing Robot's methods.
+ * The Right Command is an implementation of command for Right operations with the help of ordinal
  *
  * @author Sushant
  * 

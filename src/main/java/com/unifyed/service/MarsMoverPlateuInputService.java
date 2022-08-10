@@ -7,6 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Class responsible for processing input for plateu
+ */
 @Service
 public class MarsMoverPlateuInputService implements InputService<List<String>, Plataeu> {
     @Override

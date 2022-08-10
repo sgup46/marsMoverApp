@@ -9,12 +9,7 @@ import com.unifyed.service.commands.Command.CommandFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * MoveCommand implements the RoboCommands interface. It takes care of calling the move function of the
- * Robot. Before calling the Robot's move function, this class makes sure, the new move is within the table,
- * and Robot is properly initialized and placed on the table.
- *  
- * To make sure the move is within the table, the class gets a copy of xy Coordinates of the Robot, moves
- * the robot in the direction it is facing and checks if the new XY coordinate lies within the Table.
+ * The moveCommand is an implementation of command for move operations and will change the coordinates
  *
  * @author Sushant Gupta
  *

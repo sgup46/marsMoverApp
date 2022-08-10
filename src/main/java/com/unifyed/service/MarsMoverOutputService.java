@@ -11,6 +11,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.List;
 
+/**
+ * Class responsible for displaying the output
+ */
 @Service
 public class MarsMoverOutputService implements OutputService<Plataeu, String> {
 

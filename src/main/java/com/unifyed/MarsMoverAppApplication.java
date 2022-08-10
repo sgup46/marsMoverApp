@@ -21,6 +21,10 @@ public class MarsMoverAppApplication {
 		SpringApplication.run(MarsMoverAppApplication.class, args);
 	}
 
+	/**
+	 * Can accept the file name in arguments e.g "src/test/resources/RoverCommandsSample.txt"
+	 * @return
+	 */
 	@Bean
 	public CommandLineRunner commandLineRunnerBean() {
 		return (args) -> {

@@ -52,6 +52,7 @@ public class MarsMoverController {
                 throw new MarsRoverException("Invalid Input in the file");
             }
 
+            // 1. first process the plateu Input
             String plateuInput = inputScanner.nextLine();
             Plataeu plataeu = ((MarsMoverPlateuInputService)marsMoverPlateuInputService).processInput(Arrays.asList(plateuInput));
             logger.info(plataeu.toString());
@@ -63,13 +64,15 @@ public class MarsMoverController {
             while (inputScanner.hasNextLine()) {
                 roverInput = inputScanner.nextLine();
                 roverCommandsInput = inputScanner.nextLine();
+                //2. Process each rover and its commands input , wrap in object
                 roverCommands = ((MarsMoverRoverInputService)marsMoverRoverInputService).processInput(Arrays.asList(roverInput, roverCommandsInput));
                 logger.info(roverCommands.toString());
 
-                // final process each rover sequentially with rover commands
+                // 3. final process each rover sequentially with rover commands
                 ((MarsMoverProcessService)marsMoverProcessService).process(roverCommands, plataeu);
             }
 
+            // 4. print the output
             return ((MarsMoverOutputService)marsMoverOutputService).processOutput(plataeu);
 
         } catch (Exception e) {

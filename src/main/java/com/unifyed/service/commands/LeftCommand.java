@@ -8,9 +8,7 @@ import com.unifyed.service.commands.Command.Command;
 import org.springframework.stereotype.Component;
 
 /**
- * The LeftCommand is an implementation of commandInterface, RoboCommands. This class takes care of 
- * calling the robot's method to turn "LEFT". This class checks if the Robot is placed properly before
- * executing Robot's methods.
+ * The LeftCommand is an implementation of command for Left operations with the help of ordinal
  *
  * @author Sushant Gupta
  * 

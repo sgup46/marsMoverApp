@@ -8,12 +8,8 @@ import java.util.List;
 
 /**
  * 
- * Table is a singleton class. So it can be accessed from everywhere without instantiating. 
- * Table has length and breadth, which can be set. By default, length and breadth will be
- * set to 5.
- *  
- * Table provides methods to set it's size, get it's length and breadth and to check whether 
- * a (X,Y) co-ordinate lies within the table.
+ * Plataeu will store the rectangular coordinates
+ * and will also store the rovers added by NASA
  * 
  * @author Sushant Gupta
  */
